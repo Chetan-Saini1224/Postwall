@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "postwall",
+  "version": "1.0.0",
+  "description": "social media website location specific user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "social",
+    "media",
+    "postwall",
+    "userlocation"
+  ],
+  "author": "Chetan Saini",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "helmet": "^6.0.1",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
