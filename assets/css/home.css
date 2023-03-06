@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 90%;
+  column-gap: 1.5%;
+}
+#home-page #user-profile {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.6rem;
+}
+#home-page #posts {
+  display: grid;
+  grid-template-rows: 10vh 1fr;
+  row-gap: 0.8%;
+}
+#home-page #posts > div {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.6rem;
+}
+#home-page #users-lists {
+  display: grid;
+  grid-template-rows: 45vh 45vh;
+  row-gap: 1rem;
+}
+#home-page #users-lists > div {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 0.6rem;
+}
+
+#user-profile {
+  text-align: center;
+  max-height: 45vh;
+}
+#user-profile #background-profile-photo img {
+  height: 30%;
+  width: 100%;
+  border-radius: 0.6rem;
+}
+#user-profile #profile-photo {
+  width: 25%;
+  position: relative;
+  left: 37%;
+  top: -10%;
+  border-radius: 3px soolid black;
+}
+#user-profile #profile-photo img {
+  height: 25%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

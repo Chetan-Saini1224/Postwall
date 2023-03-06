@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+}
+#signup-form a {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+}
+form div > input {
+  margin-top: 0.5rem;
+  height: 2.5rem !important;
+  font-size: 0.8rem !important;
+}
+form .form-floating {
+  width: 100% !important;
+}
+form label {
+  font-size: 0.8rem;
+}
+form input[type=submit] {
+  width: 80%;
+  color: gray;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}

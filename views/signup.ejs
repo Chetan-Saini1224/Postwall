@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/signup.css">
+<section id="signup-form">
+<form  action="/user/signup" method="post" >
+    <div class="form-floating">
+        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+        <label >Email Address</label>
+    </div>
+    <div class="form-floating ">
+        <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+        <label>Full Name</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
+        <label>Password</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control"  placeholder="Confirm Password" required>
+        <label>Confirm Password</label>
+    </div>
+    <input class="btn btn-info btn-sm" type="submit" value="Sign Up" required>
+</form>
+<small>Have an account? <a href="/user/login">Log in</a></small>
+</section>
+<script>
+    $("form").submit((e) => {
+        e.preventDefault();
+        if($("[placeholder='Confirm Password']").val() !=  $("[name='password']").val())
+        {
+            $("[placeholder='Confirm Password']").addClass("is-invalid");
+            return;
+        }
+        else $("[placeholder='Confirm Password']").removeClass("is-invalid");
+        const req = $.ajax({
+            type:'post',
+            url: $(e.target).prop('href'),
+            data: $(e.target).serialize(),
+            success: function(data){
+                flashMessage(data)
+                $(".form-control").val("");
+            },
+            error: function(err){
+                flashMessage({error:"Error...."})
+                console.log(err);
+            }
+        })
+    })
+</script>

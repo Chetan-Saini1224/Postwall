@@ -1,0 +1,31 @@
+nav{
+    padding-top: 1rem;
+    margin-bottom: 1.5%;
+}
+#navbar
+{
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    box-shadow: rgba(129, 128, 128, 0.45) 0px 20px 15px -20px;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    #logo 
+    {
+        height: inherit;
+        img
+        {
+        width:30%;
+        height:auto; 
+        }
+    }
+    a{
+      font-weight: 600;
+      border-width: 2px;
+    }
+    a:hover{
+        color: aliceblue;
+    }
+}
+
+   

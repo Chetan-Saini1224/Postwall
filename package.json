@@ -5,7 +5,9 @@
   "description": "social media website location specific user",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-watch": "sass --no-source-map --watch assets/scss:assets/css",
+    "nodemon-watch": "nodemon index.js -e *",
+    "start": "npm-run-all --parallel sass-watch nodemon-watch"
   },
   "keywords": [
     "social",
@@ -16,13 +18,21 @@
   "author": "Chetan Saini",
   "license": "ISC",
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
     "helmet": "^6.0.1",
     "mongoose": "^6.10.0",
-    "nodemon": "^2.0.20"
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sass": "^1.58.3"
   }
 }
